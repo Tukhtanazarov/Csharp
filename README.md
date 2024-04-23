@@ -3,15 +3,10 @@
 ## Overview
 
 
-This project how I can succesfly  use data types and arithmetic operation
+This  picture  is  for   switch
 
 
-Have a look at 'Program.cs' file and you can see how I have used :
-
-* Console input/output
-* Conversion between data types
-* Arithmetic operations 
 
 ## Demo 
 
-![demo](./Assets/demo.png)
+![Switch](./Assets/Switch.png)
