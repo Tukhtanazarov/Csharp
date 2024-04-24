@@ -1,25 +1,34 @@
 ﻿using System ;
-namespace Csharp {
+using System.Linq.Expressions;
+namespace Csharp{
     class Nurs  {
         static void Main(){
-            Console.Write("Enter values: ");
-            Console.Write("First number: ");
-        string firstUserValue = Console.ReadLine();
-        Console.Write("Second number: ");
-        string secondUserValue =Console.ReadLine();
-         
-        decimal firstNumber =Convert.ToDecimal(firstUserValue);
-        decimal secondNumber = Convert.ToDecimal(secondUserValue);
+          try {
+ Console.Write("Inter a value :");
+ string userAgeValue = Console.ReadLine();
+ int userAge = Convert.ToInt32(userAgeValue);
+ //Jasalma Qatalyk
+ throw new IOException(); 
 
-        Console.WriteLine("Here are you results: ");
-        Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
-          Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
-            Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
-              Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
-                Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
-        
+ Console.WriteLine(userAge);
+ }
+ catch (FormatException formatException) 
+ {
+Console.WriteLine("Oops . we could not concert you input value . ");
+Console.WriteLine("Looks like the value you proveded is not interger. ");
+
+ }
+ //ashyp ketu katalygy 
+ catch (OverflowException overflowException) 
+ {
+Console.WriteLine("Value you provided was either too large ar too small. ");
+ }
+ // belgilenbegen (catch qilinbagan) qayalyk 
+ catch (Exception exception)
+ {
+  Console.WriteLine("Oops,something went wrong , contact support");
+ }
         }
     }
+  }
 
-
-}
